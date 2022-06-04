@@ -1,11 +1,10 @@
-
-import { Layout } from "./components/layout";
+import { Login } from "./pages/login";
 import { GlobalStyle } from "./styles/globals";
 
 function App() {
   return (
     <>
-      <Layout />
+      < Login />
       <GlobalStyle />
     </>
   );

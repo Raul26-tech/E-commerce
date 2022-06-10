@@ -1,24 +1,10 @@
-import { useEffect, useState } from "react";
-import { Container } from "./style";
 import { Input } from "../../components/input";
 import "animate.css";
 import image from "../../assets/ecommerce.svg";
 import { Button } from "../../components/button/style";
-import api from "../../services/api";
-import { Link } from "react-router-dom";
+import { Container } from "./style";
 
-export function Login() {
-  const [user, setUser] = useState([])
-
-  useEffect(() => {
-    api.get('users').then(({data}) => {
-      // console.log(data)
-      setUser(data)
-    })
-
-  }, [])
-
-
+export function SignUp() {
   return (
     <>
       <Container>
@@ -33,6 +19,11 @@ export function Login() {
             <span>Login your account</span>
             <Input
               type="text"
+              placeholder="Nome"
+              addClassName="animate__animated animate__pulse animate__delay"
+            />
+            <Input
+              type="text"
               placeholder="E-mail"
               addClassName="animate__animated animate__pulse animate__delay"
             />
@@ -41,7 +32,7 @@ export function Login() {
               placeholder="Senha"
               addClassName="animate__animated animate__pulse animate__delay"
             />
-            <Button type="submit">Entrar</Button>
+            <Button type="submit">Cadastrar</Button>
           </div>
         </main>
       </Container>

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container } from "./style";
 import { Input } from "../../components/input";
-import "animate.css";
 import image from "../../assets/ecommerce.svg";
 import { Button } from "../../components/button/style";
 import api from "../../services/api";
-import { Link } from "react-router-dom";
+import "animate.css";
 
 export function Login() {
   const [user, setUser] = useState([])

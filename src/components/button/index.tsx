@@ -4,6 +4,7 @@ import { Button } from "./style";
 interface IButtonProps {
   children: string;
   addClassName?: string;
+  onClick?: () => void;
 }
 
 export function ButtomSubmit({children}: IButtonProps) {

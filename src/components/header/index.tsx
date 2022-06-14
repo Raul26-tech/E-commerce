@@ -1,19 +1,31 @@
-import { useState } from "react";
-import { Container } from "./style";
+import { useEffect, useState } from "react";
+import { Navbar } from "./style";
 import { FaBars } from "react-icons/fa";
-import '../../styles/globals'
+import { BsCartPlusFill } from "react-icons/bs";
+import api from "../../services/api";
+import "../../styles/globals";
 
 export default function Header() {
+  // Abrindo Menu lateral
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    api.get("products").then(({ data }) => {
+      // console.log(data)
+      setProducts(data);
+    });
+  }, []);
 
   return (
     <>
-      <Container>
-        <FaBars onClick={showSidebar}/>
-        
-      </Container>
+      <Navbar>
+        <FaBars onClick={showSidebar} />
+        <BsCartPlusFill className="cart"/>
+        {/* <Sidebar></Sidebar> */}
+      </Navbar>
     </>
   );
 }

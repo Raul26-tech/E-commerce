@@ -4,8 +4,6 @@ import { Content } from "./styles";
 
 
 export default function Items () {
-
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,7 +16,9 @@ export default function Items () {
     return(
         <>
             <Content> 
-                <h3>Title</h3>
+                {/* {products.map((index) => (
+
+                ))} */}
             </Content>
         </>
     )

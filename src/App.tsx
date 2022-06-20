@@ -8,7 +8,7 @@ function App() {
     <>
       {/* <Login /> */}
       {/* <SignUp/> */}
-      <Header/>
+        <Header/>
       <GlobalStyle />
     </>
   );

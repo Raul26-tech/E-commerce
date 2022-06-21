@@ -18,7 +18,7 @@ export default function Items() {
     <>
       <Content>
         {products.map(
-          ({ id, category, description, image, price, title }, index) => (
+          ({ id, category, description, image, price, title }) => (
             <div className="cardItems" key={id}>
               <h3>{title}</h3>
               <img src={image} alt="Imagem do produto" />

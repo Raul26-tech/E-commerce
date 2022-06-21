@@ -4,12 +4,22 @@ import api from "../../services/api";
 
 import { Content } from "./styles";
 
+//ESTRUTURA DO CARD
+interface ICardProps {
+  id: string;
+  category: string;
+  description: string;
+  image: string;
+  price: number;
+  title: string;
+}
+
 export default function Items() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<ICardProps[]>([]);
 
   useEffect(() => {
-    api.get("products").then(({ data }) => {
-      console.log(data);
+    api.get<ICardProps[]>("products").then(({ data }) => {
+      // console.log(data);
       setProducts(data);
     });
   }, []);
@@ -17,17 +27,15 @@ export default function Items() {
   return (
     <>
       <Content>
-        {products.map(
-          ({ id, category, description, image, price, title }) => (
-            <div className="cardItems" key={id}>
-              <h3>{title}</h3>
-              <img src={image} alt="Imagem do produto" />
-              <span>{category}</span>
-              <article>{description}</article>
-              <span className="price">{price}</span>
-            </div>
-          )
-        )}
+        {products.map(({ id, category, description, image, price, title }) => (
+          <div className="cardItems" key={id}>
+            <h3>{title}</h3>
+            <img src={image} alt="Imagem do produto" />
+            <span>{category}</span>
+            <article>{description}</article>
+            <span className="price">{price}</span>
+          </div>
+        ))}
       </Content>
     </>
   );

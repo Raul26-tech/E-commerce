@@ -22,15 +22,15 @@ export const Content = styled.div`
         justify-content: center;
         text-align: left;
         font-size: 1rem;
-        padding: 0.5rem;
+        padding: 0.75rem;
     }
 
     .cardItems {
         width: 40%;
-        height: 80vh;
+        height: auto;
         display: flex;
         flex-direction: column;
-        padding: 0.15rem;
+        padding: 0.5rem;
         align-items: center;
         border-radius: 1rem;
         background: #fff;
@@ -54,7 +54,7 @@ export const Content = styled.div`
     }
 
     span {
-        margin: 0.5rem;
+        margin: 0.75rem;
     }
 
     article {
@@ -71,9 +71,17 @@ export const Content = styled.div`
         color: rgba(73, 74, 166,0.8);
     }
 
-    .btn-buy {
-        width: 50%;
+    .btn{
+        width: 100%;
+        height: auto;
+        padding: 0.25rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        align-items: center;
+        background-color: rgba(73, 74, 166,0.3);
     }
+
 
 
 `

@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
 import { BuyButton } from '../buttonBuy/styles';
 
 interface IContentProps {
     onclick?: () => void;
-    children: string;
+    children: ReactNode;
     className?: string;
 }
 

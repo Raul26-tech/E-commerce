@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import ButtonBuy from '../buttonBuy';
 
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 import { Content } from './styles';
 
 //ESTRUTURA DO CARD

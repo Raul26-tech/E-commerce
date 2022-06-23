@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from 'styled-components';
 
 export const Content = styled.div`
     margin: 1rem;
@@ -34,7 +33,7 @@ export const Content = styled.div`
         align-items: center;
         border-radius: 1rem;
         background: #fff;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         outline: 0;
         margin: 1rem;
         transition: 0.2s;
@@ -68,20 +67,21 @@ export const Content = styled.div`
     .price {
         margin: 0.5rem;
         font-size: 1.5rem;
-        color: rgba(73, 74, 166,0.8);
+        color: rgba(73, 74, 166, 0.8);
     }
 
-    .btn{
+    .btn {
         width: 100%;
         height: auto;
-        padding: 0.25rem;
+        padding: 0.5rem;
         display: flex;
-        justify-content: center;
         border-radius: 10px;
+        justify-content: center;
         align-items: center;
-        background-color: rgba(73, 74, 166,0.3);
+        background-color: rgba(73, 74, 166, 0.3);
     }
 
-
-
-`
+    .btn-add-cart {
+        background: rgba(67, 121, 222, 0.9);
+    }
+`;

@@ -9,7 +9,6 @@ export const Content = styled.div`
     display: flex;
     flex-flow: row wrap;
     border-radius: 1rem;
-    /* box-shadow: 2px 2px 10px rgba(0,0,0,0.5); */
     transition: 0.5s;
 
     :hover {

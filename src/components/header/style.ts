@@ -12,7 +12,7 @@ export const Navbar = styled.div`
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         color: #f5f5f5;
     }
@@ -29,9 +29,8 @@ export const Navbar = styled.div`
 
     .cart {
         position: relative;
-        width: 40px;
-        height: 20px;
-        margin-left: 91.5%;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
     }
 `;

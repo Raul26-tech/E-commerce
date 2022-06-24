@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navbar } from './style';
-import { FaBars } from 'react-icons/fa';
-import { BsCartPlusFill } from 'react-icons/bs';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../../styles/globals';
 import ProductCard from '../productCard';
 
@@ -14,9 +14,8 @@ export default function Header() {
         <>
             <Navbar>
                 <div>
-                    <FaBars onClick={showSidebar} />
-                    <BsCartPlusFill className="cart" />
-                    {/* <Sidebar></Sidebar> */}
+                    <MenuOpenIcon fontSize="large" onClick={showSidebar} />
+                    <ShoppingCartIcon className="cart" />
                 </div>
             </Navbar>
             <ProductCard />

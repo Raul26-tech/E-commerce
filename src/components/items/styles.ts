@@ -83,5 +83,10 @@ export const Content = styled.div`
 
     .btn-add-cart {
         background: rgba(67, 121, 222, 0.9);
+        padding: 0.5rem;
+    }
+
+    .iconCart {
+        margin-left: 0.5rem;
     }
 `;

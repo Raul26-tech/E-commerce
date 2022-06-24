@@ -42,6 +42,7 @@ export default function Items() {
                                 onclick={() => {}}
                             >
                                 Adicionar
+                                <AddShoppingCartIcon className="iconCart" />
                             </ButtonBuy>
                         </div>
                     </div>

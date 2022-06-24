@@ -1,18 +1,19 @@
-import "animate.css";
-import { Button } from "./style";
+import 'animate.css';
+import { ReactNode } from 'react';
+import { Button } from './style';
 
 interface IButtonProps {
-  children: string;
-  addClassName?: string;
-  onClick?: () => void;
+    children: ReactNode;
+    addClassName?: string;
+    onClick?: () => void;
 }
 
-export function ButtomSubmit({children}: IButtonProps) {
-  return (
-    <>
-      <Button className="animate__animated animate__pulse">
-        {children}
-      </Button>
-    </>
-  );
+export function ButtomSubmit({ children }: IButtonProps) {
+    return (
+        <>
+            <Button className="animate__animated animate__pulse">
+                {children}
+            </Button>
+        </>
+    );
 }

@@ -1,14 +1,10 @@
-import Header from './components/header';
-import { Login } from './pages/login';
-import { SignUp } from './pages/signUp';
+import { Routes } from './routes';
 import { GlobalStyle } from './styles/globals';
 
 function App() {
     return (
         <>
-            {/* <Login />
-            <SignUp /> */}
-            <Header />
+            <Routes />
             <GlobalStyle />
         </>
     );

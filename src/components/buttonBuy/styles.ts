@@ -15,4 +15,9 @@ export const BuyButton = styled.button`
     font-size: 1rem;
     color: #f5f5f5;
     background: rgba(73, 74, 166);
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        width: 70%;
+        font-size: 0.75rem;
+    }
 `;

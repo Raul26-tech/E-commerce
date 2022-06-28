@@ -88,4 +88,33 @@ export const Content = styled.div`
     .iconCart {
         margin-left: 0.5rem;
     }
+
+    @media screen and (max-width: 820px) and (max-width: 1100px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .cardItems {
+            width: 80%;
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cardItems {
+            width: 100%;
+            margin: 1rem auto;
+            display: flex;
+            height: auto;
+        }
+
+        img {
+            height: 50%;
+        }
+    }
 `;

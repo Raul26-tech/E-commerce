@@ -7,11 +7,12 @@ export const InputSeach = styled.div`
     justify-content: center;
 
     input {
-        width: 40%;
+        width: 50%;
         margin: 1rem 0;
         height: 2rem;
         padding: 1.2rem;
         text-align: left;
+        display: flex;
         color: rgba(67, 121, 222, 0.9);
         font-size: 1rem;
         border: 0;

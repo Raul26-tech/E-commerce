@@ -1,7 +1,6 @@
 import { Input } from '../../components/input';
 import 'animate.css';
 import image from '../../assets/ecommerce.svg';
-import { Button } from '../../components/button/style';
 import { Container } from './style';
 import { ButtomSubmit } from '../../components/button';
 import { Link } from 'react-router-dom';

@@ -7,7 +7,8 @@ export function Routes() {
     return (
         <BrowserRouter>
             <RoutesDOM>
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<Products />} />
+                <Route path="/sign" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/products" element={<Products />} />
             </RoutesDOM>

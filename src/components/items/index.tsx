@@ -11,7 +11,7 @@ interface ICardProps {
     category: string;
     description: string;
     image: string;
-    price: number;
+    price: string;
     title: string;
 }
 
@@ -24,6 +24,16 @@ export default function Items() {
             setProducts(data);
         });
     }, []);
+
+    // const handleRequest = useCallback((items: ICardProps[]) => {
+    //     return items.map((item: ICardProps) => ({
+    //         ...item,
+    //         price: Number(item.price).toLocaleString('pt-br', {
+    //             style: 'currency',
+    //             currency: 'BRL',
+    //         }),
+    //     }));
+    // }, []);
 
     return (
         <>

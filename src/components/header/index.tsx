@@ -13,7 +13,11 @@ export default function Header() {
         <>
             <Navbar>
                 <div>
-                    <MenuOpenIcon fontSize="large" onClick={showSidebar} />
+                    <MenuOpenIcon
+                        className="menu"
+                        fontSize="large"
+                        onClick={showSidebar}
+                    />
                     <ShoppingCartIcon className="cart" />
                 </div>
             </Navbar>

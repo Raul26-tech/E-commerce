@@ -1,7 +1,15 @@
-import Items from "../items";
-import { Container } from "./styles";
+import Items from '../items';
+import { Loading } from '../loading';
+import { Container } from './styles';
 
-export default function ProductCard () {
+interface IProductsProps {
+    isLoading?: boolean;
+}
+
+export default function ProductCard({ isLoading }: IProductsProps) {
+    if (isLoading) {
+        return <Loading />;
+    }
 
     return (
         <>
@@ -9,6 +17,5 @@ export default function ProductCard () {
                 <Items />
             </Container>
         </>
-
-    )
+    );
 }

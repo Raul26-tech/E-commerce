@@ -7,12 +7,12 @@ import { Content } from './styles';
 
 //ESTRUTURA DO CARD
 interface ICardProps {
-    id: string;
-    category: string;
-    description: string;
-    image: string;
-    price: string;
-    title: string;
+    id?: string;
+    category?: string;
+    description?: string;
+    image?: string;
+    price?: string;
+    title?: string;
 }
 
 export default function Items() {
@@ -24,16 +24,6 @@ export default function Items() {
             setProducts(data);
         });
     }, []);
-
-    // const handleRequest = useCallback((items: ICardProps[]) => {
-    //     return items.map((item: ICardProps) => ({
-    //         ...item,
-    //         price: Number(item.price).toLocaleString('pt-br', {
-    //             style: 'currency',
-    //             currency: 'BRL',
-    //         }),
-    //     }));
-    // }, []);
 
     return (
         <>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import api from '../../services/api';
 import ButtonBuy from '../buttonBuy';
+
+import api from '../../services/api';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 import { Content } from './styles';
@@ -35,11 +36,8 @@ export default function Items() {
                         <span>{category}</span>
                         <span className="price">{price}</span>
                         <div className="btn">
-                            <ButtonBuy onclick={() => {}}>Comprar</ButtonBuy>
-                            <ButtonBuy
-                                className="btn-add-cart"
-                                onclick={() => {}}
-                            >
+                            <ButtonBuy>Comprar</ButtonBuy>
+                            <ButtonBuy className="btn-add-cart">
                                 Adicionar
                                 <AddShoppingCartIcon className="iconCart" />
                             </ButtonBuy>

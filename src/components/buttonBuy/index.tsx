@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { BuyButton } from '../buttonBuy/styles';
 
 interface IContentProps {
@@ -8,6 +8,8 @@ interface IContentProps {
 }
 
 export default function ButtonBuy({ children, className }: IContentProps) {
+    const [isOpenBuyMOdal, setIsOpenBuyMOdal] = useState(false);
+
     return (
         <>
             <BuyButton className={`${className}`}>{children}</BuyButton>

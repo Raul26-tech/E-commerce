@@ -1,6 +1,8 @@
 import { ReactNode, useState } from 'react';
+import { BuyButton, Container } from '../buttonBuy/styles';
 import Modal from 'react-modal';
-import { BuyButton } from '../buttonBuy/styles';
+
+import CloseIcon from '@mui/icons-material/Close';
 
 Modal.setAppElement('#root');
 
@@ -31,9 +33,20 @@ export default function ButtonBuy({ children, className }: IContentProps) {
             </BuyButton>
             <Modal
                 isOpen={isOpenModal}
-                onRequestClose={handleCloseModalProduct}
+                // onRequestClose={handleCloseModalProduct}
+                overlayClassName="overlay-modal"
+                className="modal-content"
             >
-                Olá
+                <Container>
+                    Olá
+                    <button
+                        type="button"
+                        onClick={handleCloseModalProduct}
+                        className="btn-close"
+                    >
+                        <CloseIcon />
+                    </button>
+                </Container>
             </Modal>
         </>
     );

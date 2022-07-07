@@ -21,7 +21,6 @@ export default function Items() {
 
     useEffect(() => {
         api.get<ICardProps[]>('products').then(({ data }) => {
-            // console.log(data);
             setProducts(data);
         });
     }, []);

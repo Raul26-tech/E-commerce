@@ -1,10 +1,13 @@
+import { ProductContextProvider } from './context/ProductContext';
 import { Routes } from './routes';
 import { GlobalStyle } from './styles/globals';
 
 function App() {
     return (
         <>
-            <Routes />
+            <ProductContextProvider>
+                <Routes />
+            </ProductContextProvider>
             <GlobalStyle />
         </>
     );

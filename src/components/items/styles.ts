@@ -42,6 +42,10 @@ export const Content = styled.div`
         transform: translateY(2px);
     }
 
+    .content-products {
+        background: red;
+    }
+
     img {
         width: 60%;
         height: 40vh;

@@ -3,11 +3,11 @@ import ButtonBuy from '../buttonBuy';
 import Modal from 'react-modal';
 
 import api from '../../services/api';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 import { Content } from './styles';
 import { Container } from '../buttonBuy/styles';
 
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
@@ -25,6 +25,15 @@ interface ICardProps {
 export default function Items() {
     const [products, setProducts] = useState<ICardProps[]>([]);
     const [productSelect, setProductSelect] = useState<ICardProps>();
+    const [amount, setAmount] = useState(0);
+
+    function handleCount() {
+        setAmount(amount + 1);
+    }
+
+    function handleDecreaseCount() {
+        setAmount(amount - 1);
+    }
 
     useEffect(() => {
         api.get<ICardProps[]>('products').then(({ data }) => {
@@ -75,15 +84,17 @@ export default function Items() {
                     >
                         <CloseIcon />
                     </button>
-                    <h3>Produto {productSelect?.title}</h3>
-                    <div className="count">
-                        <button>
+                    <div className="content-products">
+                        <h3>{productSelect?.title}</h3>
+                        {/* <div className="count">
+                        <button onClick={handleCount}>
                             <AddIcon />
                         </button>
-                        <p>{0}</p>
-                        <button>
+                        <p>{amount}</p>
+                        <button onClick={handleDecreaseCount}>
                             <HorizontalRuleIcon />
                         </button>
+                    </div> */}
                     </div>
                 </Container>
             </Modal>

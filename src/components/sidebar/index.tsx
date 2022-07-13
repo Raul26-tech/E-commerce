@@ -1,13 +1,14 @@
-import { Conteiner } from "./styles";
+import { ReactNode } from 'react';
+import { Conteiner } from './styles';
 
 interface IContentProps {
-  children?: string;
+    children?: ReactNode;
 }
 
 export default function Sidebar({ children }: IContentProps) {
-  return (
-    <>
-      <Conteiner>{children}</Conteiner>
-    </>
-  );
+    return (
+        <>
+            <Conteiner>{children}</Conteiner>
+        </>
+    );
 }

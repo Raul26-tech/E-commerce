@@ -14,7 +14,11 @@ interface IContentProps {
     className?: string;
 }
 
-export default function ButtonBuy({ children, className }: IContentProps) {
+export default function ButtonBuy({
+    children,
+    className,
+    onClick,
+}: IContentProps) {
     const [isOpenModal, setIsOpenModal] = useState(false);
     const [amount, setAmount] = useState(0);
 
@@ -36,37 +40,9 @@ export default function ButtonBuy({ children, className }: IContentProps) {
 
     return (
         <>
-            <BuyButton
-                className={`${className}`}
-                onClick={handleOpenModalProduct}
-            >
+            <BuyButton className={`${className}`} onClick={onClick}>
                 {children}
             </BuyButton>
-            <Modal
-                isOpen={isOpenModal}
-                overlayClassName="overlay-modal"
-                className="modal-content"
-            >
-                <Container>
-                    <button
-                        type="button"
-                        onClick={handleCloseModalProduct}
-                        className="btn-close"
-                    >
-                        <CloseIcon />
-                    </button>
-                    <h3>Produto</h3>
-                    <div className="count">
-                        <button onClick={handleCount}>
-                            <AddIcon />
-                        </button>
-                        <p>{amount}</p>
-                        <button onClick={handleDecreaseCount}>
-                            <HorizontalRuleIcon />
-                        </button>
-                    </div>
-                </Container>
-            </Modal>
         </>
     );
 }

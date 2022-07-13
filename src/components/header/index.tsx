@@ -7,7 +7,10 @@ import '../../styles/globals';
 export default function Header() {
     // Abrindo Menu lateral
     const [sidebar, setSidebar] = useState(false);
-    const showSidebar = () => setSidebar(!sidebar);
+
+    // const handleOpenSidebar () => {
+    //     setSidebar(prevState => !prevState)
+    // }
 
     return (
         <>
@@ -16,7 +19,7 @@ export default function Header() {
                     <MenuOpenIcon
                         className="menu"
                         fontSize="large"
-                        onClick={showSidebar}
+                        // onClick={handleOpenSidebar}
                     />
                     <ShoppingCartIcon className="cart" />
                 </div>

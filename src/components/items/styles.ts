@@ -42,10 +42,6 @@ export const Content = styled.div`
         transform: translateY(2px);
     }
 
-    .content-products {
-        background: red;
-    }
-
     img {
         width: 60%;
         height: 40vh;
@@ -93,16 +89,6 @@ export const Content = styled.div`
         margin-left: 0.5rem;
     }
 
-    /* Estilização do Modal */
-
-    .section-product {
-        background: red;
-    }
-
-    .text {
-        color: red;
-    }
-
     @media screen and (max-width: 820px) and (max-width: 1100px) {
         width: 100%;
         display: flex;
@@ -130,5 +116,80 @@ export const Content = styled.div`
         img {
             height: 50%;
         }
+    }
+`;
+
+export const Container = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0.5rem;
+
+    .content-products {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .text {
+        font-size: 0.95rem;
+    }
+
+    .section-product {
+        width: 100%;
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .image-product {
+        width: 40%;
+        height: 50%;
+        margin: 2rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background: transparent;
+    }
+
+    .adding-product {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5rem;
+        background: rgba(73, 74, 166, 0.2);
+        border-radius: 1rem;
+    }
+
+    .add-quantity {
+        width: 100%;
+        height: 20%;
+        margin: 1.5rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span {
+        color: rgba(73, 74, 166, 0.5);
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+
+    .button-adding,
+    .button-decrease {
+        background: rgba(67, 121, 222, 0.9);
+        border-radius: 0.2rem;
+        border: 0;
+    }
+
+    .amount {
+        font-size: 1rem;
     }
 `;

@@ -21,10 +21,3 @@ export const BuyButton = styled.button`
         font-size: 0.75rem;
     }
 `;
-
-export const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding: 0.5rem;
-`;

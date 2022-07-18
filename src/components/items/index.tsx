@@ -4,8 +4,7 @@ import Modal from 'react-modal';
 
 import api from '../../services/api';
 
-import { Content } from './styles';
-import { Container } from '../buttonBuy/styles';
+import { Container, Content } from './styles';
 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
@@ -89,14 +88,30 @@ export default function Items() {
                         <section className="section-product">
                             <img
                                 className="image-product"
-                                style={{
-                                    width: 100,
-                                    marginTop: 10,
-                                    padding: 10,
-                                }}
                                 src={productSelect?.image}
                                 alt="Imagem do produto"
                             />
+                            <div className="adding-product">
+                                <span>{productSelect?.price}</span>
+                                <div className="add-quantity">
+                                    <button
+                                        className="button-adding"
+                                        type="submit"
+                                        onClick={handleCount}
+                                    >
+                                        <AddIcon />
+                                    </button>
+                                    <span className="amount">{amount}</span>
+                                    <button
+                                        className="button-decrease"
+                                        type="submit"
+                                        onClick={handleDecreaseCount}
+                                    >
+                                        <HorizontalRuleIcon />
+                                    </button>
+                                </div>
+                                <ButtonBuy>Comprar</ButtonBuy>
+                            </div>
                         </section>
                     </div>
                 </Container>

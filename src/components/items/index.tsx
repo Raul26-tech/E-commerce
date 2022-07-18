@@ -85,16 +85,19 @@ export default function Items() {
                         <CloseIcon />
                     </button>
                     <div className="content-products">
-                        <h3>{productSelect?.title}</h3>
-                        {/* <div className="count">
-                        <button onClick={handleCount}>
-                            <AddIcon />
-                        </button>
-                        <p>{amount}</p>
-                        <button onClick={handleDecreaseCount}>
-                            <HorizontalRuleIcon />
-                        </button>
-                    </div> */}
+                        <h3 className="text">{productSelect?.title}</h3>
+                        <section className="section-product">
+                            <img
+                                className="image-product"
+                                style={{
+                                    width: 100,
+                                    marginTop: 10,
+                                    padding: 10,
+                                }}
+                                src={productSelect?.image}
+                                alt="Imagem do produto"
+                            />
+                        </section>
                     </div>
                 </Container>
             </Modal>

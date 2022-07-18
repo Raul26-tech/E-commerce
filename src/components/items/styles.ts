@@ -93,6 +93,16 @@ export const Content = styled.div`
         margin-left: 0.5rem;
     }
 
+    /* Estilização do Modal */
+
+    .section-product {
+        background: red;
+    }
+
+    .text {
+        color: red;
+    }
+
     @media screen and (max-width: 820px) and (max-width: 1100px) {
         width: 100%;
         display: flex;

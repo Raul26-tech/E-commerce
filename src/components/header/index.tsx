@@ -3,14 +3,15 @@ import { Navbar } from './style';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../../styles/globals';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     // Abrindo Menu lateral
-    const [sidebar, setSidebar] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
 
-    // const handleOpenSidebar () => {
-    //     setSidebar(prevState => !prevState)
-    // }
+    // const handleOpen = () => {
+    //     setIsOpenMenu((prevState) => !prevState);
+    // };
 
     return (
         <>
@@ -19,7 +20,7 @@ export default function Header() {
                     <MenuOpenIcon
                         className="menu"
                         fontSize="large"
-                        // onClick={handleOpenSidebar}
+                        // onClick={handleOpen}
                     />
                     <ShoppingCartIcon className="cart" />
                 </div>

@@ -6,6 +6,7 @@ export const Navbar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     background: rgba(67, 121, 222, 0.9);
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
 

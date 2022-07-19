@@ -6,7 +6,6 @@ export function Products() {
     return (
         <>
             <Header />
-            <InputSearch />
             <ProductCard />
         </>
     );

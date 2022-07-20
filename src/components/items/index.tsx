@@ -6,10 +6,7 @@ import api from '../../services/api';
 
 import { Container, Content } from './styles';
 
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import CloseIcon from '@mui/icons-material/Close';
-import AddIcon from '@mui/icons-material/Add';
-import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import { HiMinusSm, HiPlus, HiShoppingCart, HiX } from 'react-icons/hi';
 
 //ESTRUTURA DO CARD
 interface ICardProps {
@@ -64,7 +61,10 @@ export default function Items() {
                                 }
                             >
                                 Adicionar
-                                <AddShoppingCartIcon className="iconCart" />
+                                <HiShoppingCart
+                                    className="iconCart"
+                                    size={24}
+                                />
                             </ButtonBuy>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ export default function Items() {
                         className="btn-close"
                         onClick={() => setProductSelect(undefined)}
                     >
-                        <CloseIcon />
+                        <HiX size={24} />
                     </button>
                     <div className="content-products">
                         <h3 className="text">{productSelect?.title}</h3>
@@ -99,7 +99,7 @@ export default function Items() {
                                         type="submit"
                                         onClick={handleCount}
                                     >
-                                        <AddIcon />
+                                        <HiPlus size={22} />
                                     </button>
                                     <span className="amount">{amount}</span>
                                     <button
@@ -107,7 +107,7 @@ export default function Items() {
                                         type="submit"
                                         onClick={handleDecreaseCount}
                                     >
-                                        <HorizontalRuleIcon />
+                                        <HiMinusSm size={22} />
                                     </button>
                                 </div>
                                 <ButtonBuy>Comprar</ButtonBuy>

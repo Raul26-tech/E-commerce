@@ -46,7 +46,7 @@ export const Menu = styled.div`
 
     li {
         list-style: none;
-        padding: 0.5rem;
+        padding: 1rem;
         font-size: 1rem;
         transition: 0.2s ease-out;
     }
@@ -54,6 +54,19 @@ export const Menu = styled.div`
     .link {
         color: #f5f5f5;
         text-decoration: none;
+        align-items: center;
+        display: flex;
+    }
+
+    .icon {
+        margin-left: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem;
+    }
+
+    .shopping-cart {
+        background: red;
     }
 
     li:hover {

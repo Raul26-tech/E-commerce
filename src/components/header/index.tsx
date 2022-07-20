@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { Menu, Navbar } from './style';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import HiOutlineUserAdd from 'react-icons/hi';
+import {
+    HiMenu,
+    HiOutlineLogout,
+    HiOutlineTable,
+    HiShoppingCart,
+    HiStop,
+    HiUserAdd,
+} from 'react-icons/hi';
 import '../../styles/globals';
 import { Link } from 'react-router-dom';
 
@@ -17,8 +22,8 @@ export default function Header() {
     return (
         <>
             <Navbar>
-                <MenuOpenIcon onClick={handleOpen} />
-                <ShoppingCartIcon />
+                <HiMenu onClick={handleOpen} size={26} />
+                <HiShoppingCart size={26} />
             </Navbar>
             {isOpenMenu && (
                 <Menu>
@@ -26,16 +31,25 @@ export default function Header() {
                         <li>
                             <Link to="/products" className="link">
                                 Categorias
+                                <div className="icon">
+                                    <HiOutlineTable size={22} />
+                                </div>
                             </Link>
                         </li>
                         <li>
                             <Link to="/signUp" className="link">
                                 Cadastre-se
+                                <div className="icon">
+                                    <HiUserAdd size={22} />
+                                </div>
                             </Link>
                         </li>
                         <li>
                             <Link to="/sign" className="link">
                                 Logout
+                                <div className="icon">
+                                    <HiOutlineLogout size={22} />
+                                </div>
                             </Link>
                         </li>
                     </ul>

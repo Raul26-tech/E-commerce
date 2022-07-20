@@ -7,6 +7,7 @@ import api from '../../services/api';
 import { Container, Content } from './styles';
 
 import { HiMinusSm, HiPlus, HiShoppingCart, HiX } from 'react-icons/hi';
+import { useCarBuy } from '../../hooks/useCarBuy';
 
 //ESTRUTURA DO CARD
 interface ICardProps {
@@ -21,15 +22,27 @@ interface ICardProps {
 export default function Items() {
     const [products, setProducts] = useState<ICardProps[]>([]);
     const [productSelect, setProductSelect] = useState<ICardProps>();
+    const [openModal, setOpenModal] = useState(false);
     const [amount, setAmount] = useState(0);
+    const {handleAddProduct} = useCarBuy();
+
 
     function handleCount() {
         setAmount(amount + 1);
     }
 
     function handleDecreaseCount() {
-        setAmount(amount - 1);
+        setAmount(amount === 0 ? 0 :  amount - 1);
     }
+
+    function convertAmount(price: string | undefined, multiplier: boolean) {
+        const amountMultiplier = multiplier ? Number(price) * amount : Number(price);
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(amountMultiplier)
+    }
+    
 
     useEffect(() => {
         api.get<ICardProps[]>('products').then(({ data }) => {
@@ -40,24 +53,24 @@ export default function Items() {
     return (
         <>
             <Content>
-                {products.map(({ id, category, image, price, title }) => (
+                {products.map(({ id, category, image, price,title }) => (
                     <div className="cardItems" key={id}>
                         <h3>{title}</h3>
                         <img src={image} alt="Imagem do produto" />
                         <span>{category}</span>
-                        <span className="price">{price}</span>
+                        <span className="price">{convertAmount(price,false)}</span>
                         <div className="btn">
                             <ButtonBuy>Comprar</ButtonBuy>
                             <ButtonBuy
                                 className="btn-add-cart"
-                                onClick={() =>
+                                onClick={() =>{
                                     setProductSelect({
                                         id,
                                         category,
                                         image,
                                         price,
                                         title,
-                                    })
+                                    }); setOpenModal(!openModal)}
                                 }
                             >
                                 Adicionar
@@ -71,7 +84,7 @@ export default function Items() {
                 ))}
             </Content>
             <Modal
-                isOpen={!!productSelect}
+                isOpen={openModal}
                 overlayClassName="overlay-modal"
                 className="modal-content"
             >
@@ -92,7 +105,7 @@ export default function Items() {
                                 alt="Imagem do produto"
                             />
                             <div className="adding-product">
-                                <span>{productSelect?.price}</span>
+                                <span>{convertAmount(productSelect?.price,true)}</span>
                                 <div className="add-quantity">
                                     <button
                                         className="button-adding"
@@ -110,7 +123,10 @@ export default function Items() {
                                         <HiMinusSm size={22} />
                                     </button>
                                 </div>
-                                <ButtonBuy>Comprar</ButtonBuy>
+                                <ButtonBuy
+                                  onClick={() =>
+                                  {handleAddProduct({qtdProduct:amount,products:productSelect});
+                                  setOpenModal(false)}}>Adicionar</ButtonBuy>
                             </div>
                         </section>
                     </div>

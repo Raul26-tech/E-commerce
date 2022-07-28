@@ -5,7 +5,6 @@ import {
     HiOutlineLogout,
     HiOutlineTable,
     HiShoppingCart,
-    HiStop,
     HiUserAdd,
 } from 'react-icons/hi';
 import '../../styles/globals';
@@ -23,6 +22,9 @@ export default function Header() {
         <>
             <Navbar>
                 <HiMenu onClick={handleOpen} size={26} />
+                <div className="cart-notification">
+                    <span>+9</span>
+                </div>
                 <HiShoppingCart size={26} />
             </Navbar>
             {isOpenMenu && (

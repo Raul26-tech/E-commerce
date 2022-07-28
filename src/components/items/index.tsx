@@ -47,9 +47,9 @@ export default function Items() {
                         <span>{category}</span>
                         <span className="price">{price}</span>
                         <div className="btn">
-                            <ButtonBuy>Comprar</ButtonBuy>
+                            {/* <ButtonBuy>Comprar</ButtonBuy> */}
                             <ButtonBuy
-                                className="btn-add-cart"
+                                addClassName="btn-add-cart"
                                 onClick={() =>
                                     setProductSelect({
                                         id,

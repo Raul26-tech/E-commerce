@@ -19,13 +19,13 @@ export const Content = styled.div`
         align-items: center;
         justify-content: center;
         text-align: left;
-        font-size: 1rem;
+        font-size: 0.75rem;
         padding: 0.75rem;
     }
 
     .cardItems {
-        width: 40%;
-        height: auto;
+        width: 22%;
+        max-height: 20%;
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
@@ -43,12 +43,12 @@ export const Content = styled.div`
     }
 
     img {
-        width: 60%;
-        height: 40vh;
-        background-size: 100% 100%;
+        max-width: 15vw;
+        height: 20vh;
+        background-size: cover;
         background-repeat: no-repeat;
-        margin-top: 0.75rem;
-        border-radius: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
     }
 
     span {
@@ -65,14 +65,14 @@ export const Content = styled.div`
 
     .price {
         margin: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: rgba(73, 74, 166, 0.8);
     }
 
     .btn {
         width: 100%;
         height: auto;
-        padding: 0.5rem;
+        padding: 0.25rem;
         display: flex;
         border-radius: 10px;
         justify-content: center;
@@ -82,7 +82,8 @@ export const Content = styled.div`
 
     .btn-add-cart {
         background: rgba(67, 121, 222, 0.9);
-        padding: 0.5rem;
+        padding: 1rem;
+        width: 100%;
     }
 
     .iconCart {

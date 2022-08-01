@@ -27,6 +27,86 @@ export const Navbar = styled.div`
     > svg {
         color: white;
     }
+
+    .cart-notification {
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        position: absolute;
+        top: 25%;
+        left: 96.3%;
+        border-radius: 50%;
+    }
+
+    span {
+        font-size: 10px;
+        padding: 0.25rem;
+        color: #f5f5f5;
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 978px) {
+        .cart-notification {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: red;
+            position: absolute;
+            top: 25%;
+            left: 96.3%;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+        .cart-notification {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: red;
+            position: absolute;
+            top: 25%;
+            left: 95.8%;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .cart-notification {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: red;
+            position: absolute;
+            top: 25%;
+            left: 95.8%;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        .cart-notification {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: red;
+            position: absolute;
+            top: 25%;
+            left: 88%;
+            border-radius: 50%;
+        }
+    }
 `;
 
 export const Menu = styled.div`

@@ -60,10 +60,12 @@ export default function Items() {
                         <span>{category}</span>
                         <span className="price">{convertAmount(price,false)}</span>
                         <div className="btn">
-                            <ButtonBuy>Comprar</ButtonBuy>
+                            {/* <ButtonBuy>Comprar</ButtonBuy> */}
                             <ButtonBuy
                                 className="btn-add-cart"
                                 onClick={() =>{
+                                addClassName="btn-add-cart"
+                                onClick={() =>
                                     setProductSelect({
                                         id,
                                         category,

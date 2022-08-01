@@ -4,17 +4,17 @@ import { BuyButton } from '../buttonBuy/styles';
 interface IContentProps {
     onClick?: () => void;
     children: ReactNode;
-    className?: string;
+    addClassName?: string;
 }
 
 export default function ButtonBuy({
     children,
-    className,
+    addClassName,
     onClick,
 }: IContentProps) {
     return (
         <>
-            <BuyButton className={`${className}`} onClick={onClick}>
+            <BuyButton className={`${addClassName}`} onClick={onClick}>
                 {children}
             </BuyButton>
         </>

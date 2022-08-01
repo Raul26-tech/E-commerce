@@ -6,7 +6,6 @@ import {
     HiOutlineLogout,
     HiOutlineTable,
     HiShoppingCart,
-    HiStop,
     HiUserAdd,
 } from 'react-icons/hi';
 import '../../styles/globals';
@@ -27,6 +26,10 @@ export default function Header() {
                 <Link to="/carPage">
                     <HiShoppingCart size={26} />
                 </Link>
+                <div className="cart-notification">
+                    <span>+9</span>
+                </div>
+                <HiShoppingCart size={26} />
             </Navbar>
             {isOpenMenu && (
                 <Menu>

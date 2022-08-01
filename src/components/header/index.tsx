@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, Navbar } from './style';
+
 import {
     HiMenu,
     HiOutlineLogout,
@@ -22,6 +23,9 @@ export default function Header() {
         <>
             <Navbar>
                 <HiMenu onClick={handleOpen} size={26} />
+                <Link to="/carPage">
+                    <HiShoppingCart size={26} />
+                </Link>
                 <div className="cart-notification">
                     <span>+9</span>
                 </div>
